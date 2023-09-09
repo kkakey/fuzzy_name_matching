@@ -11,9 +11,9 @@
 # threshold -- name matching threshold (0-1)
 # one.top.match -- keep only the top name match (T) or all name matches above threshold (F)
 ###############################################################  
-
+library(fuzzywuzzyR)
 fuzzy_name <- function(nameList, nl, threshold, one.top.match){
-  library(fuzzywuzzyR)
+  
   matched_list <- matrix(0, nrow=length(nameList))
   
   for (j in (1:length(nameList))) {
